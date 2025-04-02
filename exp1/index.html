@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store Checkout</title>
+</head>
+<body style="font-family: Arial; text-align: center;background-color: antiquewhite; padding-top: 10%;">
+    <h2>Online Store</h2>
+    <p>Product 1 - $10 <button onclick="add(10)">Add</button></p>
+    <p>Product 2 - $20 <button onclick="add(20)">Add</button></p>
+    <h3>Cart Total: $<span id="total">0</span></h3>
+    <button onclick="checkout()">Checkout</button>
+
+    <script>
+        let total = 0;
+        function add(price) {
+            total += price;
+            document.getElementById("total").innerText = total;
+        }
+        function checkout() {
+            alert("Checkout Successful! Total: $" + total);
+        }
+    </script>
+</body>
+</html>

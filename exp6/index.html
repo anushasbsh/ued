@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leap Year Checker</title>
+</head>
+<body style="text-align: center; font-family: Arial;">
+    <h2>Leap Year Checker</h2>
+    <input id="year" type="number" placeholder="Enter year">
+    <button onclick="check()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            let y = document.getElementById("year").value;
+            document.getElementById("result").innerText = (y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0)) ? "Leap Year" : "Not a Leap Year";
+        }
+    </script>
+</body>
+</html>
